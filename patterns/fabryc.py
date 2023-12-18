@@ -27,14 +27,14 @@ class BlackjackFactory(CasinoGameFactory):
         return Blackjack()
 
 class Casino:
-    def __init__(self, game_factory):
+    def init(self, game_factory):
         self.game_factory = game_factory
 
     def start_game(self):
         game = self.game_factory.create_game()
         return game.play()
 
-if __name__ == "__main__":
+if name == "main":
     # Використовуємо фабрику для створення гри в рулетку
     roulette_factory = RouletteFactory()
     casino_roulette = Casino(roulette_factory)
